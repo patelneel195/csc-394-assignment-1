@@ -8,3 +8,13 @@
     <h3>Major: Computer Science</h3> 
   </body>
 </html>
+server {
+  listen 80;
+  listen [::]:80;
+  server_name hw2 www.hw2;
+  root /var/www/html/hw2;
+  index index.html;
+  location / {
+          try_files $uri $uri.html $uri/ =404;
+  }
+}
